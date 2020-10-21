@@ -2,10 +2,13 @@
 #include "Empregado.hpp"
 
 class Engenheiro : public Empregado {
-
+  private:
+	  int projetos;
   public:
-    std::string nome;  
-	int projetos;
-	
+
+    Engenheiro(std::string novoNome, double novoSalarioHora, int projetosIniciais):
+      Empregado(novoNome, novoSalarioHora), projetos(projetosIniciais) {}
+
+    int const getProjetos() {return projetos;};
 };
 

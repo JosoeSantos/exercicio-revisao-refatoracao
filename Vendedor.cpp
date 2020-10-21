@@ -3,12 +3,16 @@
 
 class Vendedor : public Empregado {
 
+	private:
+    double quotaMensalVendas;
   public:
-    std::string nome;  	  
-	
+
+  Vendedor(std::string novoNome, double novoSalarioHora, double novaQuotaMensalVendas):
+    Empregado(novoNome, novoSalarioHora), quotaMensalVendas(novoSalarioHora) {}
+
 	double quotaTotalAnual() {
 	  return quotaMensalVendas * 12;
 	}
-	
+
 };
 
