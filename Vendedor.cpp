@@ -1,5 +1,6 @@
 #include <string>
 #include "Empregado.hpp"
+#define MONTHS_ON_YEAR 12
 
 class Vendedor : public Empregado {
 
@@ -11,7 +12,7 @@ class Vendedor : public Empregado {
     Empregado(novoNome, novoSalarioHora), quotaMensalVendas(novoSalarioHora) {}
 
 	double quotaTotalAnual() {
-	  return quotaMensalVendas * 12;
+	  return quotaMensalVendas * MONTHS_ON_YEAR;
 	}
 
 };

@@ -1,6 +1,6 @@
 #ifndef EMPREGADO_H
 #define EMPREGADO_H
-
+#define NORMAL_HOURS_PER_DAY 8
 #include <iostream>
 #include <string>
 
@@ -16,8 +16,8 @@ class Empregado {
       double t = horasTrabalhadas;
 
 	    //Cálculo de hora extra (+50% se horasTrabalhadas > 8)
-      if (horasTrabalhadas > 8) {
-        double x = horasTrabalhadas - 8;
+      if (horasTrabalhadas > NORMAL_HOURS_PER_DAY) {
+        double x = horasTrabalhadas - NORMAL_HOURS_PER_DAY;
         t += x / 2;
       }
   	  return t * salarioHora;
